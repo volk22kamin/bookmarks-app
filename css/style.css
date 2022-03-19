@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200&family=Merriweather:wght@300&display=swap');
+:root{
+    --primary-color: #1b6380;
+    --bookmarks: rgb(67 135 103 / 83%);
+}
+
+html{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #c3cdd1;
+    background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23266632' fill-opacity='0.41'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    height: 100vh;
+}
+.button-container{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+#button{
+    cursor: pointer;
+    height: 50px;
+    width: 250px;
+    font-size: 24px;
+    letter-spacing: 2px;
+    font-family: Merriweather, sans-serif;  
+    background:rgba(23, 82, 170, 0.801) ;
+    outline: none;
+    border: none;
+    border-radius: 5px ;
+}
+#button:hover{
+    /* filter: brightness(10%); */
+    background: rgb(16, 52, 107);
+    color: white;
+}
+#button:active{
+    transform: scale(0.95);
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.item{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 7px;
+    background-color: var(--bookmarks);
+    /* display: flex;
+    flex-direction: column; */
+    /* align-items: end; */
+    gap: 10px;
+}
+.fa-times{
+    float: right;
+    color: white;
+}
+
+.item:hover{
+    cursor: pointer;
+    filter: brightness(85%);
+}
+.name{
+    margin-top: 20px;
+    margin-right: 20px;
+}
+a{
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+a:link,
+a:visited{
+    color: white;
+    text-decoration: none;
+}
+a:hover,
+a:active{
+    text-decoration: underline;
+}
+
+.name img{
+    height: 20px;
+    width: 20px;
+    vertical-align: sub;
+    margin-right: 5px;
+}
+.modal-container{
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.show-modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal{
+    background-color: white;
+    max-width: 95%;
+    width: 500px;   
+    border-radius:5px ;
+    box-shadow: 0 0 10px black;
+    animation: modalopen 1s;
+}
+.modal-header{
+    background: var(--primary-color);
+    padding: 15px;
+    border-top-right-radius :5px ;
+    border-top-left-radius :5px ;
+    color: white;
+
+}
+h3{
+    font-size: 22px;
+    font-family: Merriweather, sans-serif;  
+    margin: 0;
+}
+#close-modal{
+    font-size: 24px;
+    margin-top: 15px;
+    margin-right: 15px;
+    color: white;
+    cursor: pointer;
+}
+#form{
+
+}
+.form-group{
+    padding: 10px;
+    margin-top: 5px;
+}
+label{
+    font-family: Karla, sans-serif;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+.form-input{
+    width: 97%;
+    background: whitesmoke;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    padding: 4px;
+    outline: none;
+}
+#save{
+    background-color: var(--primary-color);
+    border: none;
+    font-size: 24px;
+    color: white;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    width: 80px;
+}
+#save:hover{
+    cursor: pointer;
+    filter: brightness(120%);
+}
+#save:active{
+    transform: scale(0.97);
+}
+#save:focus{
+    border: none;
+    outline: none;
+}
+
+
+@keyframes modalopen {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    button{
+        width: 90%;
+    }
+}
+@media screen and (max-width: 600px) {
+  
+    .item{
+        width: 90%;
+        text-align: left;
+    }
+}

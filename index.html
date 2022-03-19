@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+
+
+    <link rel="stylesheet" href="css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <title>Bookmark App</title>
+</head>
+<body>
+    <div class="button-container">
+        <button id="button">Add Bookmark</button>
+    </div>
+    <div class="container" id="bookmarks-container"></div>
+    <div id="mc" class="modal-container ">
+        <div class="modal">
+            <i class="fa-solid fa-times close-icon" id="close-modal"></i>
+            <div class="modal-header">
+                <h3>Add Bookmark</h3>
+            </div>
+            <form  id="form">
+                <div class="form-group">
+                    <label for="website-name">Website Name</label>
+                    <input class="form-input" type="text" id="website-name">
+                </div>
+                <div class="form-group">
+                    <label for="website-url">Website URL</label>
+                    <input class="form-input" type="text" id="website-url">
+                </div>
+                <button id="save" type="submit">Save</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
